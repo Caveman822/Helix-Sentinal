@@ -1,4 +1,5 @@
 import noConsoleLog from './rules/no-console-log';
+import maxFileLines from './rules/max-file-lines';
 import recommended from './configs/recommended';
 import strict from './configs/strict';
 import prettierDefaults from './prettier/default';
@@ -6,6 +7,7 @@ import prettierDefaults from './prettier/default';
 const helixSentinel = {
   rules: {
     'no-console-log': noConsoleLog,
+    'max-file-lines': maxFileLines,
   },
   configs: {
     recommended,
