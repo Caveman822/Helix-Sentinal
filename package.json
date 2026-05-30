@@ -1,0 +1,47 @@
+{
+  "name": "helix-sentinel",
+  "version": "0.0.4",
+  "description": "Helix ESLint shared config and custom rules",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Caveman822",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "prettier": "^3.8.3"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "eslint": "^8.57.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.4.11",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node --format esm && tsc -p tsconfig.build.json",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config jest.config.cjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
