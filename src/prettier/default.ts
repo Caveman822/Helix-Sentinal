@@ -9,6 +9,7 @@ const prettierDefaults: Config = {
   useTabs: false,
   bracketSpacing: true,
   arrowParens: 'always',
+  endOfLine: 'lf',
 };
 
 export default prettierDefaults;

@@ -5,7 +5,6 @@ const noConsoleLogRule: Rule.RuleModule = {
     type: 'suggestion',
     docs: {
       description: 'Disallow console.log statements',
-      category: 'Best Practices',
       recommended: true,
     },
     fixable: 'code', // enables --fix support

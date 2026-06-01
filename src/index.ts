@@ -1,13 +1,21 @@
 import noConsoleLog from './rules/no-console-log';
-import maxFileLines from './rules/max-file-lines';
 import recommended from './configs/recommended';
 import strict from './configs/strict';
 import prettierDefaults from './prettier/default';
+import type { Rule, Linter } from 'eslint';
 
-const helixSentinel = {
+interface HelixSentinel {
+  rules: Record<string, Rule.RuleModule>;
+  configs: {
+    recommended: Linter.Config[];
+    strict: Linter.Config[];
+  };
+  prettier: typeof prettierDefaults;
+}
+
+const helixSentinel: HelixSentinel = {
   rules: {
     'no-console-log': noConsoleLog,
-    'max-file-lines': maxFileLines,
   },
   configs: {
     recommended,
